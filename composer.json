@@ -1,0 +1,15 @@
+{
+  "name": "flowerphp/flowerphp",
+  "description": "Engine",
+  "minimum-stability": "stable",
+  "license": "AGPL-3.0-only",
+  "authors": [
+    {
+      "name": "FlexICE",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    
+  }
+}

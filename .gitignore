@@ -1,0 +1,5 @@
+.idea
+
+# Composer files
+vendor
+composer.phar
