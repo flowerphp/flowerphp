@@ -9,7 +9,11 @@
       "email": "email@example.com"
     }
   ],
+  "autoload": {
+    "psr-4": {
+      "flowerphp\\": "source"
+    }
+  },
   "require": {
-    
   }
 }
