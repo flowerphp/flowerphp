@@ -8,6 +8,9 @@ final class App
 {
     const VERSION_APP = "1.0";
 
+    /*
+     * Иницилизация класса App
+     */
     public function __construct()
     {
     }
