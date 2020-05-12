@@ -3,3 +3,6 @@
 # Composer files
 vendor
 composer.phar
+
+# Blade
+/resources/cache/

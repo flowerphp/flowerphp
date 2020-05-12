@@ -1,6 +1,8 @@
 <?php
 
 use flowerphp\App;
+use Klein\Klein;
+use League\Flysystem\Adapter\Local;
 
 /*
  *
@@ -11,18 +13,14 @@ use flowerphp\App;
  */
 
 
-require_once __DIR__.
-    DIRECTORY_SEPARATOR.
-    "vendor".
-    DIRECTORY_SEPARATOR.
-    "autoload.php";
+require_once __DIR__."/vendor/autoload.php";
 
-$App = new App();
+$Adapter = new Local(__DIR__);
 
-require_once __DIR__.
-    DIRECTORY_SEPARATOR.
-    "app".
-    DIRECTORY_SEPARATOR.
-    "routes".
-    DIRECTORY_SEPARATOR.
-    "web.php";
+$App = new App($Adapter);
+
+$Router = new Klein();
+
+require_once __DIR__."/app/routes/web.php";
+
+$Router->dispatch();

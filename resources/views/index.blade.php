@@ -8,6 +8,11 @@
     <title>FlowerPHP</title>
 </head>
 <body>
+
+<div id="app" class="{{ $App::VERSION_APP }}">
+
+</div>
+
 <style>
 
 </style>
