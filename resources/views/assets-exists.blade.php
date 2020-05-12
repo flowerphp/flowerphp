@@ -10,7 +10,7 @@
 <body>
 
 <div id="app" class="{{ $App->getConfiguration()->getConfig()['App']['Name'] }}">
-    <h1>FlowerPHP</h1>
+    <h1>Asset не найден</h1>
     <nav>
         <a href="https://github.com/flowerphp/flowerphp" target="_blank">GitHub</a>
     </nav>

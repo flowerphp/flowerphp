@@ -1,6 +1,7 @@
 <?php
 
 use flowerphp\App;
+use flowerphp\Assets;
 use Klein\Klein;
 use League\Flysystem\Adapter\Local;
 
@@ -22,5 +23,7 @@ $App = new App($Adapter);
 $Router = new Klein();
 
 require_once __DIR__."/app/routes/web.php";
+
+(new Assets($App,$Router));
 
 $Router->dispatch();
