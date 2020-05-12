@@ -9,12 +9,30 @@
 </head>
 <body>
 
-<div id="app" class="{{ $App::VERSION_APP }}">
-
+<div id="app" class="{{ $App->getConfiguration()->getConfig()['App']['Name'] }}">
+    <h1>FlowerPHP</h1>
+    <nav>
+        <a href="https://github.com/flowerphp/flowerphp" target="_blank">GitHub</a>
+    </nav>
 </div>
 
 <style>
-
+    body {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+    .{{ $App->getConfiguration()->getConfig()['App']['Name'] }} {
+        font-family: sans-serif;
+        h1 {
+            color: #171717;
+        }
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+    }
 </style>
 </body>
 </html>

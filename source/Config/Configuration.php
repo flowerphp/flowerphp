@@ -17,6 +17,14 @@ class Configuration
         $this->config = json_decode($filesystem->read("app/config/".self::FILE_CONFIG_NAME.".json"), true);
     }
 
+    /**
+     * @return mixed
+     */
+    public function getConfig()
+    {
+        return $this->config;
+    }
+
     public function __toString()
     {
         return json_encode($this->config);
