@@ -27,7 +27,6 @@ final class App
          * Создание экземпляров
          */
 
-
         $this->FileSystem = new Filesystem($adapter);
         $this->Configuration = new Configuration($this->FileSystem);
         $this->Blade = new Blade(__DIR__."/../resources/views",__DIR__."/../resources/cache");
