@@ -26,4 +26,10 @@ require_once __DIR__."/app/routes/web.php";
 
 (new Assets($App,$Router));
 
+$Router->onHttpError(function ($code, $router) use ($App) {
+    $router->response()->body(
+        $App->getView()->get("errors.$code")
+    );
+});
+
 $Router->dispatch();
