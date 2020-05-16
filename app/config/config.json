@@ -1,5 +1,11 @@
 {
   "App": {
     "Name": "FlowerPHP"
+  },
+  "DataBase": {
+    "Host": "127.0.0.1",
+    "Name": "example",
+    "UserName": "root",
+    "Password": ""
   }
 }
