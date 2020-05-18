@@ -2,6 +2,7 @@
 
 use flowerphp\App;
 use flowerphp\Assets;
+use flowerphp\ClassesObserve\Observer;
 use Klein\Klein;
 use League\Flysystem\Adapter\Local;
 
@@ -21,6 +22,12 @@ $Adapter = new Local(__DIR__);
 $App = new App($Adapter);
 
 $Router = new Klein();
+
+$ObserveAppClass = new Observer("App");
+
+$ObserveAppClass->observe();
+
+print $ObserveAppClass->nameClass;
 
 require_once __DIR__."/app/routes/web.php";
 

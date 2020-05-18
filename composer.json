@@ -11,7 +11,8 @@
   "autoload": {
     "psr-4": {
       "flowerphp\\": "source",
-      "flowerphp\\Config\\": "source/Config/"
+      "flowerphp\\Config\\": "source/Config/",
+      "flowerphp\\ClassesObserve\\": "source/ClassesObserve"
     }
   },
   "require": {
