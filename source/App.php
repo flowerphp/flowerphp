@@ -8,6 +8,7 @@ use flowerphp\Config\Configuration;
 use Jenssegers\Blade\Blade;
 use League\Flysystem\Adapter\Local;
 use League\Flysystem\Filesystem;
+use PDO;
 
 final class App
 {
@@ -17,6 +18,7 @@ final class App
     private $View;
     private $FileSystem;
     private $Configuration;
+    private $DataBase;
 
     /*
      * Иницилизация класса App
@@ -31,7 +33,19 @@ final class App
         $this->Configuration = new Configuration($this->FileSystem);
         $this->Blade = new Blade(__DIR__."/../resources/views",__DIR__."/../resources/cache");
         $this->View = new View($this);
+        $this->DataBase = new PDO(
+            'mysql:host=' . $this->getConfiguration()->getConfig()['DataBase']['Host'] . ';dbname='. $this->getConfiguration()->getConfig()['DataBase']['Name'],
+            $this->getConfiguration()->getConfig()['DataBase']['UserName'],
+            $this->getConfiguration()->getConfig()['DataBase']['Password']);
 
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDataBase()
+    {
+        return $this->DataBase;
     }
 
     /**
