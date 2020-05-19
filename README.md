@@ -1,8 +1,10 @@
-# FlowerPHP
+# Начало
 
-Самый лёгкий движок для создания сайтов
+## Старт
 
- - Версия PHP : **7.3**
+Пока движок можно скачать с GitHub репозитория [https://github.com/flowerphp/flowerphp](https://github.com/flowerphp/flowerphp) нажав на кнопку **Clone or Download &gt; Download Zip**
 
-Документация (В разработке)
-https://two-fl3xice.gitbook.io/flowerphp/
+
+
+
+
