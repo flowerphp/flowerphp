@@ -33,11 +33,21 @@ final class App
         $this->Configuration = new Configuration($this->FileSystem);
         $this->Blade = new Blade(__DIR__."/../resources/views",__DIR__."/../resources/cache");
         $this->View = new View($this);
-        $this->DataBase = new PDO(
-            'mysql:host=' . $this->getConfiguration()->getConfig()['DataBase']['Host'] . ';dbname='. $this->getConfiguration()->getConfig()['DataBase']['Name'],
-            $this->getConfiguration()->getConfig()['DataBase']['UserName'],
-            $this->getConfiguration()->getConfig()['DataBase']['Password']);
+        $this->connectDB();
 
+    }
+
+    private function connectDB()
+    {
+        if ($this->getConfiguration()->getConfig()['DataBase']['Enabled'])
+        {
+            $this->DataBase = new PDO(
+                'mysql:host=' . $this->getConfiguration()->getConfig()['DataBase']['Host'] . ';dbname='. $this->getConfiguration()->getConfig()['DataBase']['Name'],
+                $this->getConfiguration()->getConfig()['DataBase']['UserName'],
+                $this->getConfiguration()->getConfig()['DataBase']['Password']);
+        } else {
+            $this->DataBase = "Please enable connection to bd in config.json";
+        }
     }
 
     /**
