@@ -12,7 +12,8 @@
     "psr-4": {
       "flowerphp\\": "source",
       "flowerphp\\Config\\": "source/Config/",
-      "flowerphp\\ClassesObserve\\": "source/ClassesObserve"
+      "flowerphp\\ClassesObserve\\": "source/ClassesObserve",
+      "App\\Controllers\\": "app/Controllers"
     }
   },
   "require": {

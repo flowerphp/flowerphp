@@ -19,6 +19,8 @@ $Router = new Klein();
 
 // Вызов всех пользовательских роутов
 require_once __DIR__."/app/routes/web.php";
+# Ajax
+require_once __DIR__."/app/routes/ajax.php";
 
 // Создание анонимного класса Assets функцию construct который будет вызван
 (new Assets($App,$Router));
