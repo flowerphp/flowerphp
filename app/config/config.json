@@ -3,8 +3,9 @@
     "Name": "FlowerPHP"
   },
   "DataBase": {
+    "Enabled": false,
     "Host": "127.0.0.1",
-    "Name": "example",
+    "Name": "",
     "UserName": "root",
     "Password": ""
   }
