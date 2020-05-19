@@ -14,7 +14,7 @@ class Assets
         $router->get("/assets", function () use ($app) {
             return $app->getView()->get("assets-exists");
         });
-        $router->get("/assets/[:path]", function ($request) use ($app) {
+        $router->get("/assets/[*:path]", function ($request) use ($app) {
             try {
                 header_remove("content");
                 header("Content-Type:;charset=UTF-8");
