@@ -13,7 +13,8 @@
       "flowerphp\\": "source",
       "flowerphp\\Config\\": "source/Config/",
       "flowerphp\\ClassesObserve\\": "source/ClassesObserve",
-      "App\\Controllers\\": "app/Controllers"
+      "App\\Controllers\\": "app/Controllers",
+      "tc\\Session\\": "source/Session"
     }
   },
   "require": {
