@@ -2,6 +2,7 @@
 
 use flowerphp\App;
 use flowerphp\Assets;
+use flowerphp\ClassesObserve\Observer;
 use Klein\Klein;
 use League\Flysystem\Adapter\Local;
 
@@ -32,5 +33,7 @@ $Router->onHttpError(function ($code, $router) use ($App) {
     );
 });
 
+
 // Запустить работу роутера
 $Router->dispatch();
+

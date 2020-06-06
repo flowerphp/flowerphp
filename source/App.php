@@ -53,7 +53,7 @@ final class App
     /**
      * @return mixed
      */
-    public function getDataBase()
+    public function getDataBase() : PDO
     {
         return $this->DataBase;
     }
