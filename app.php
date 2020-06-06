@@ -5,9 +5,16 @@ use flowerphp\Assets;
 use flowerphp\ClassesObserve\Observer;
 use Klein\Klein;
 use League\Flysystem\Adapter\Local;
+use Whoops\Handler\PrettyPageHandler;
+use Whoops\Run;
 
 // Вызываем авто-загрузчик классов Composer
 require_once __DIR__."/vendor/autoload.php";
+
+// Создание обработчика ошибок от библиотеки filp/whoops
+$whoops = new Run();
+$whoops->pushHandler(new PrettyPageHandler);
+$whoops->register();
 
 // Создание адаптера для абстрактной файловой системы
 $Adapter = new Local(__DIR__);

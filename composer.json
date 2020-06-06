@@ -23,6 +23,7 @@
     "klein/klein": "^2.1",
     "league/flysystem": "^1.0",
     "ext-json": "*",
-    "ext-pdo": "*"
+    "ext-pdo": "*",
+    "filp/whoops": "^2.7"
   }
 }
